@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Segoe UI, sans-serif;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating diyas */
+.diyas span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp 10s linear infinite;
+}
+
+.diyas span:nth-child(1) { left: 10%; }
+.diyas span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.diyas span:nth-child(3) { left: 60%; animation-delay: 4s; }
+.diyas span:nth-child(4) { left: 80%; animation-delay: 6s; }
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
+
+.container {
+  background: #fffaf0;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+h1 { color: #e65100; }
+.subtitle { color: #555; }
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+input {
+  padding: 12px;
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #e65100;
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.hidden { display: none; }
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
